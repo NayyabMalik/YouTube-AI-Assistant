@@ -1,0 +1,14 @@
+langchain
+langchain-community
+langchain-openai
+langchain-huggingface
+youtube-transcript-api
+openai
+tiktoken
+huggingface-hub
+sentence-transformers
+flask
+yt-dlp
+SpeechRecognition 
+pydub
+python-dotenv

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-robot"></i> YouTube AI Assistant</h1>
+            <p>Get answers from YouTube videos using AI technology</p>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-play-circle"></i> Step 1: Enter YouTube URL</h2>
+            <form id="videoForm">
+                <div class="form-group">
+                    <label for="videoUrl">YouTube Video Link</label>
+                    <input type="text" id="videoUrl" name="video_url" placeholder="https://youtu.be/..." required>
+                </div>
+                <button type="submit" id="processBtn">
+                    <span class="loader" id="processLoader"></span>
+                    <i class="fas fa-cog"></i> Process Video
+                </button>
+            </form>
+            <div class="status-box" id="videoStatus"></div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-question-circle"></i> Step 2: Ask a Question</h2>
+            <form id="questionForm">
+                <div class="form-group">
+                    <label for="question">Your Question</label>
+                    <input type="text" id="question" name="question" placeholder="e.g., What is the main topic of this video?" required>
+                </div>
+                <button type="submit" id="askBtn">
+                    <span class="loader" id="askLoader"></span>
+                    <i class="fas fa-paper-plane"></i> Ask Question
+                </button>
+            </form>
+            <div id="answer"></div>
+        </div>
+        
+        <footer>
+            <p>Powered by AI Technology • YouTube Chatbot © 2023</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
