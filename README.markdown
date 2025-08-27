@@ -17,7 +17,7 @@ A Flask-based web application that allows users to input a YouTube video URL, tr
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/NayyabMalik/YouTube-AI-Assistant
    cd youtube-ai-assistant
    ```
 
@@ -84,15 +84,6 @@ youtube-ai-assistant/
 - **Question**: "Is the topic about peace?"
 - **Expected Answer**: "Yes, the topic relates to peace through mindfulness meditation."
 
-## Troubleshooting
-- **Premature Success Message**: Ensure `script.js` does not contain simulated responses (`setTimeout`). Use the provided `script.js` to sync with the backend.
-- **Transcription Failure**:
-  - Check `cleaned_transcript.txt` for content.
-  - If empty, audio may be unclear; test `audio.wav` manually or use CMU Sphinx (`recognizer.recognize_sphinx`).
-  - If `RequestError` occurs, Google’s free API may be rate-limited; wait a few minutes.
-- **Incorrect Answers**: Verify `cleaned_transcript.txt` matches the video content. If answers mention unrelated topics (e.g., AI), check for JavaScript simulation code.
-- **ffmpeg Errors**: Ensure `ffmpeg` is in PATH or project directory (`ffmpeg -version`).
-- **OpenRouter Errors**: Confirm your API key and quota at [OpenRouter](https://openrouter.ai).
 
 ## Deployment
 For production:
@@ -117,4 +108,4 @@ Contributions are welcome! Submit issues or pull requests to improve functionali
 MIT License © 2023
 
 ## Contact
-For support, contact [your-email@example.com] or open an issue on the repository.
+For support, contact nayyabm16@gmail.com or open an issue on the repository.
